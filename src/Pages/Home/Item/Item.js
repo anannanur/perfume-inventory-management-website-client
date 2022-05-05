@@ -6,7 +6,7 @@ const Item = ({item}) => {
     return (
         <div className='item'>
             <img src={img} alt="" />
-            <h4 className='fw-bold'>{name}</h4>
+            <h5 className='fw-bold'>{name}</h5>
             <p className='text-secondary'><small>{description}</small></p>
             <p className='text-danger fw-bold'>Price: ৳{price}</p>
             <p className='text-primary fw-bold'><small>Quantity: {quantity}</small></p>

@@ -15,7 +15,6 @@
 	width: 100%;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
     height: 100vh;
 }
 .box-area {
@@ -85,12 +84,27 @@
 	}
 }
 /* responsive  */
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 450px) {
     .banner-title{
-        padding-top: 40%;
+        padding-top: 60%;
     }
     .banner-title h1{   
-        text-align: center;
-        font-size: 28px;  
+        font-size: 18px;  
+    }
+}
+@media screen and (min-width: 451px) and (max-width: 576px) {
+    .banner-title{
+        padding-top: 50%;
+    }
+    .banner-title h1{   
+        font-size: 25px;  
+    }
+}
+@media screen and (min-width: 577px) and (max-width: 992px){
+    .banner-title{
+        padding-top: 10%;
+    }
+    .banner-title h1{   
+        font-size: 35px;  
     }
 }
