@@ -1,0 +1,31 @@
+img {
+    width: 300px;
+    transition: .8s;
+}
+
+img:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+}
+
+.item {
+    padding: 20px;
+    box-shadow: -2px -1px 16px 31px rgba(0, 0, 0, 0.04);
+    -webkit-box-shadow: -2px -1px 16px 31px rgba(0, 0, 0, 0.04);
+    -moz-box-shadow: -2px -1px 16px 31px rgba(0, 0, 0, 0.04);
+}
+/* responsive  */
+@media screen and (max-width: 576px) {
+    img{
+        width: 100%;
+    }
+
+}
+
+@media screen and (min-width: 577px)and (max-width: 992px) {
+    img{
+        width: 100%;
+    }
+
+}
