@@ -3,65 +3,65 @@
         "id": 1,
         "name": "Nina Ricci Eau de Perfume",
         "Collection": "For women",
-        "description": "Ricci Ricci Eau de Perfume arrives on the market in 2009, as a fragrance for glamorous and urban heroines. It is composed of rhubarb, bergamot, moonflower, Indian tuberose, centifolia rose, patchouli and sandalwood. Ricci Ricci was created by Aurelien Guichard and Jacques Huclier.",
+        "description": "This arrives on the market in 2009, as a fragrance for glamorous and urban heroines. It is composed of rhubarb, bergamot, moonflower, Indian tuberose, centifolia rose, patchouli and sandalwood",
         "img": "https://i.ibb.co/vQ82GHg/items1.webp",
         "price": 6250,
-        "quantity": 1,
+        "quantity": 5,
         "supplier" : "J M Fashion Ind"
     },
     {
         "id": 2,
-        "name": "Nina Ricci Eau de Perfume",
+        "name": "Chanel Chance Edp Eau de Parfume",
         "Collection": "For women",
-        "description": "Ricci Ricci Eau de Perfume arrives on the market in 2009, as a fragrance for glamorous and urban heroines. It is composed of rhubarb, bergamot, moonflower, Indian tuberose, centifolia rose, patchouli and sandalwood. Ricci Ricci was created by Aurelien Guichard and Jacques Huclier.",
-        "img": "https://i.ibb.co/vQ82GHg/items1.webp",
-        "price": 6250,
-        "quantity": 1,
-        "supplier" : "J M Fashion Ind"
+        "description": "Chanel Chance Perfume a floral fragrance in a round bottle. Unpredictable, in perpetual movement, Chanel Chance sweeps you into its whirlwind of happiness and fantasy. An olfactory encounter with chance.",
+        "img": "https://i.ibb.co/J5Hv7Jj/Chanel-Chance-Edp-Eau-de-Parfum-Spray1-1-570x570.jpg",
+        "price": 17500,
+        "quantity": 3,
+        "supplier" : "ASM Chemical Industries Ltd"
 
     },
     {
         "id": 3,
-        "name": "Nina Ricci Eau de Perfume",
+        "name": "Burberry For Women Perfume",
         "Collection": "For women",
-        "description": "Ricci Ricci Eau de Perfume arrives on the market in 2009, as a fragrance for glamorous and urban heroines. It is composed of rhubarb, bergamot, moonflower, Indian tuberose, centifolia rose, patchouli and sandalwood. Ricci Ricci was created by Aurelien Guichard and Jacques Huclier.",
-        "img": "https://i.ibb.co/vQ82GHg/items1.webp",
-        "price": 6250,
-        "quantity": 1,
-        "supplier" : "J M Fashion Ind"
+        "description": "Burberry Perfume is a striking but minimalist fragrance that honors the city of London and the women who call it their home. It opens with fresh, succulent notes of blackcurrant and fresh green apple",
+        "img": "https://i.ibb.co/y5R2yqY/Burberry-For-Women-Classic-Eau-de-Parfum1.jpg",
+        "price": 3753,
+        "quantity": 5,
+        "supplier" : "Oud Al Jannah"
 
     },
     {
         "id": 4,
-        "name": "Nina Ricci Eau de Perfume",
+        "name": "Jimmy Choo Blossom Perfume",
         "Collection": "For women",
-        "description": "Ricci Ricci Eau de Perfume arrives on the market in 2009, as a fragrance for glamorous and urban heroines. It is composed of rhubarb, bergamot, moonflower, Indian tuberose, centifolia rose, patchouli and sandalwood. Ricci Ricci was created by Aurelien Guichard and Jacques Huclier.",
-        "img": "https://i.ibb.co/vQ82GHg/items1.webp",
-        "price": 6250,
-        "quantity": 1,
+        "description": "Embody the beauty of spring with the Jimmy Choo Blossom Spray, a fruity floral womens fragrance with woody facets. Top Notes about this are Exotic Fruit Accord, Frangipani Flower, Sandalwood mixture",
+        "img": "https://i.ibb.co/VSC4v7g/Jimmy-Choo-Blossom-Special-Edition1-570x570.jpg",
+        "price": 7250,
+        "quantity": 3,
         "supplier" : "J M Fashion Ind"
 
     },
     {
         "id": 5,
-        "name": "Nina Ricci Eau de Perfume",
+        "name": "Britney Spears Fantasy In Bloom",
         "Collection": "For women",
-        "description": "Ricci Ricci Eau de Perfume arrives on the market in 2009, as a fragrance for glamorous and urban heroines. It is composed of rhubarb, bergamot, moonflower, Indian tuberose, centifolia rose, patchouli and sandalwood. Ricci Ricci was created by Aurelien Guichard and Jacques Huclier.",
-        "img": "https://i.ibb.co/vQ82GHg/items1.webp",
+        "description": "Fantasy In Bloom Perfume by Britney Spears, released in 2017 . A radiant fruity floral perfume with a great presence. Full of fun and excitement. A terrific choice for a summer or spring scent.",
+        "img": "https://i.ibb.co/tPjC8Wf/Britney-Spears-Fantasy-In-Bloom-EDT-for-Women1-570x570.jpg",
         "price": 6250,
-        "quantity": 1,
-        "supplier" : "J M Fashion Ind"
+        "quantity": 5,
+        "supplier" : "Oud Al Jannah"
 
     },
     {
         "id": 6,
-        "name": "Nina Ricci Eau de Perfume",
+        "name": "Carolina Herrera Good Girl EDP",
         "Collection": "For women",
-        "description": "Ricci Ricci Eau de Perfume arrives on the market in 2009, as a fragrance for glamorous and urban heroines. It is composed of rhubarb, bergamot, moonflower, Indian tuberose, centifolia rose, patchouli and sandalwood. Ricci Ricci was created by Aurelien Guichard and Jacques Huclier.",
-        "img": "https://i.ibb.co/vQ82GHg/items1.webp",
-        "price": 6250,
-        "quantity": 1,
-        "supplier" : "J M Fashion Ind"
+        "description": "The sweet, breathtaking and alluring qualities of Jasmine, bring a bright of femininity. The Good Girl’s mysterious side is express with richly fragrant Cocoa, Almond and Coffee bring notes of bold vibrancy.",
+        "img": "https://i.ibb.co/9q0SfMB/Carolina-Herrera-Good-Girl-EDP-7-570x570.jpg",
+        "price": 8788,
+        "quantity": 7,
+        "supplier" : "ASM Chemical Industries Ltd"
 
     }
 ]

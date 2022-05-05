@@ -5,11 +5,12 @@
 .item-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 25px;
+    grid-gap: 40px;
     justify-items: center;
     width: 90%;
     margin: auto;
     text-align: center;
+    
 }
 
 /* responsive  */
