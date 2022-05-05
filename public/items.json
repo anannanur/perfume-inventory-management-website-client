@@ -7,7 +7,8 @@
         "img": "https://i.ibb.co/vQ82GHg/items1.webp",
         "price": 6250,
         "quantity": 5,
-        "supplier" : "J M Fashion Ind"
+        "supplier" : "J M Fashion Ind",
+        "sold": "no"
     },
     {
         "id": 2,
@@ -17,7 +18,8 @@
         "img": "https://i.ibb.co/J5Hv7Jj/Chanel-Chance-Edp-Eau-de-Parfum-Spray1-1-570x570.jpg",
         "price": 17500,
         "quantity": 3,
-        "supplier" : "ASM Chemical Industries Ltd"
+        "supplier" : "ASM Chemical Industries Ltd",
+        "sold": "no"
 
     },
     {
@@ -28,7 +30,8 @@
         "img": "https://i.ibb.co/y5R2yqY/Burberry-For-Women-Classic-Eau-de-Parfum1.jpg",
         "price": 3753,
         "quantity": 5,
-        "supplier" : "Oud Al Jannah"
+        "supplier" : "Oud Al Jannah",
+        "sold": "no"
 
     },
     {
@@ -39,7 +42,8 @@
         "img": "https://i.ibb.co/VSC4v7g/Jimmy-Choo-Blossom-Special-Edition1-570x570.jpg",
         "price": 7250,
         "quantity": 3,
-        "supplier" : "J M Fashion Ind"
+        "supplier" : "J M Fashion Ind",
+        "sold": "no"
 
     },
     {
@@ -50,7 +54,8 @@
         "img": "https://i.ibb.co/tPjC8Wf/Britney-Spears-Fantasy-In-Bloom-EDT-for-Women1-570x570.jpg",
         "price": 6250,
         "quantity": 5,
-        "supplier" : "Oud Al Jannah"
+        "supplier" : "Oud Al Jannah",
+        "sold": "no"
 
     },
     {
@@ -61,7 +66,8 @@
         "img": "https://i.ibb.co/9q0SfMB/Carolina-Herrera-Good-Girl-EDP-7-570x570.jpg",
         "price": 8788,
         "quantity": 7,
-        "supplier" : "ASM Chemical Industries Ltd"
+        "supplier" : "ASM Chemical Industries Ltd",
+        "sold": "no"
 
     }
 ]
