@@ -1,14 +1,15 @@
 img {
-    width: 400px;
+    width: 300px;
     transition: .8s;
     border-radius: 10px;
 }
 
 img:hover {
-    transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    overflow: hidden;
+    transform: scale(.8);
+    -webkit-transform: scale(.8);
+    -moz-transform: scale(.8);
+    
+    
 }
 /* #d2dce9 */
 .item {
