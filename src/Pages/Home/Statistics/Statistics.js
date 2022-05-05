@@ -6,9 +6,9 @@ import CountUp from 'react-countup';
 
 const Statistics = () => {
     return (
-        <div className='statistics-section bg-dark py-5 my-5'>
-            <h1 className='text-center text-warning fw-bold py-5'>Some Statistics</h1>
-            <div className="row text-warning pt-4 pb-5 mt-5">
+        <div className='statistics-section py-5 mt-5'>
+            <h1 className='text-center fw-bold py-5'>Some Statistics</h1>
+            <div className="row pt-4 pb-5 mt-5">
                 <div className="col-12 col-md-3 text-center">
                <h1> <FontAwesomeIcon icon={faAngleDoubleRight} /></h1>
                     <h1><CountUp end={2000} duration={5}/></h1>

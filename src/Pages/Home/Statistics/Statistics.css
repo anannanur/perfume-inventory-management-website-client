@@ -3,4 +3,8 @@
     background-size: center;
     background-image: url(../../../images/statistics.png);
     overflow-x: hidden;
+    color: goldenrod;
+}
+.statistics-section h1{
+    font-family: 'Oxygen', sans-serif;
 }
