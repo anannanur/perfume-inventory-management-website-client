@@ -1,0 +1,67 @@
+[
+    {
+        "id": 1,
+        "name": "Nina Ricci Eau de Perfume",
+        "Collection": "For women",
+        "description": "Ricci Ricci Eau de Perfume arrives on the market in 2009, as a fragrance for glamorous and urban heroines. It is composed of rhubarb, bergamot, moonflower, Indian tuberose, centifolia rose, patchouli and sandalwood. Ricci Ricci was created by Aurelien Guichard and Jacques Huclier.",
+        "img": "https://i.ibb.co/vQ82GHg/items1.webp",
+        "price": 6250,
+        "quantity": 1,
+        "supplier" : "J M Fashion Ind"
+    },
+    {
+        "id": 2,
+        "name": "Nina Ricci Eau de Perfume",
+        "Collection": "For women",
+        "description": "Ricci Ricci Eau de Perfume arrives on the market in 2009, as a fragrance for glamorous and urban heroines. It is composed of rhubarb, bergamot, moonflower, Indian tuberose, centifolia rose, patchouli and sandalwood. Ricci Ricci was created by Aurelien Guichard and Jacques Huclier.",
+        "img": "https://i.ibb.co/vQ82GHg/items1.webp",
+        "price": 6250,
+        "quantity": 1,
+        "supplier" : "J M Fashion Ind"
+
+    },
+    {
+        "id": 3,
+        "name": "Nina Ricci Eau de Perfume",
+        "Collection": "For women",
+        "description": "Ricci Ricci Eau de Perfume arrives on the market in 2009, as a fragrance for glamorous and urban heroines. It is composed of rhubarb, bergamot, moonflower, Indian tuberose, centifolia rose, patchouli and sandalwood. Ricci Ricci was created by Aurelien Guichard and Jacques Huclier.",
+        "img": "https://i.ibb.co/vQ82GHg/items1.webp",
+        "price": 6250,
+        "quantity": 1,
+        "supplier" : "J M Fashion Ind"
+
+    },
+    {
+        "id": 4,
+        "name": "Nina Ricci Eau de Perfume",
+        "Collection": "For women",
+        "description": "Ricci Ricci Eau de Perfume arrives on the market in 2009, as a fragrance for glamorous and urban heroines. It is composed of rhubarb, bergamot, moonflower, Indian tuberose, centifolia rose, patchouli and sandalwood. Ricci Ricci was created by Aurelien Guichard and Jacques Huclier.",
+        "img": "https://i.ibb.co/vQ82GHg/items1.webp",
+        "price": 6250,
+        "quantity": 1,
+        "supplier" : "J M Fashion Ind"
+
+    },
+    {
+        "id": 5,
+        "name": "Nina Ricci Eau de Perfume",
+        "Collection": "For women",
+        "description": "Ricci Ricci Eau de Perfume arrives on the market in 2009, as a fragrance for glamorous and urban heroines. It is composed of rhubarb, bergamot, moonflower, Indian tuberose, centifolia rose, patchouli and sandalwood. Ricci Ricci was created by Aurelien Guichard and Jacques Huclier.",
+        "img": "https://i.ibb.co/vQ82GHg/items1.webp",
+        "price": 6250,
+        "quantity": 1,
+        "supplier" : "J M Fashion Ind"
+
+    },
+    {
+        "id": 6,
+        "name": "Nina Ricci Eau de Perfume",
+        "Collection": "For women",
+        "description": "Ricci Ricci Eau de Perfume arrives on the market in 2009, as a fragrance for glamorous and urban heroines. It is composed of rhubarb, bergamot, moonflower, Indian tuberose, centifolia rose, patchouli and sandalwood. Ricci Ricci was created by Aurelien Guichard and Jacques Huclier.",
+        "img": "https://i.ibb.co/vQ82GHg/items1.webp",
+        "price": 6250,
+        "quantity": 1,
+        "supplier" : "J M Fashion Ind"
+
+    }
+]
