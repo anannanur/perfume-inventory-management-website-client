@@ -11,8 +11,8 @@ const Items = () => {
     }, []);
 
     return (
-        <div>
-            <h1 className='item-title'>Inventory Items</h1>
+        <div className='py-5'>
+            <h1 className='item-title pt-3 pb-5 fw-bold text-dark'>Inventory Items</h1>
             <div className='item-container'>
                 {
                     items.map(item => <Item
