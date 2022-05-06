@@ -4,6 +4,9 @@ import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import img from '../../../images/login.jpg';
 import './Login.css';
 import auth from '../../../firebase.init';
+import SocialLogin from '../SocialLogin/SocialLogin';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSignIn } from '@fortawesome/free-solid-svg-icons';
 
 const Login = () => {
     const emailRef = useRef('');
@@ -26,11 +29,11 @@ const Login = () => {
         event.preventDefault();
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
-        signInWithEmailAndPassword(email,password);
+        signInWithEmailAndPassword(email, password);
     }
 
-    if(user){
-       navigate(from, {replace: true});
+    if (user) {
+        navigate(from, { replace: true });
     }
 
     const navigateRegister = event => {
@@ -39,26 +42,27 @@ const Login = () => {
     return (
         <div className='login py-5 bg-dark'>
             <div className="container">
+                <h1 className='text-center pb-5 fw-bold text-info'>Please Login</h1>
                 <div className="row">
                     <div className="col-12 col-md-6 text-center px-5">
                         <img className="w-100 img-fluid" src={img} alt="" />
                     </div>
                     <div className="col-12 col-md-6 px-5">
-                        <h1 className='text-center pt-3 fw-bold text-info'>Please Login</h1>
                         <form onSubmit={handleSubmit}>
-                            {/* <SocialLogin></SocialLogin> */}
+                            <SocialLogin></SocialLogin>
                             <div>
                                 <div className="mb-3">
                                     <label htmlFor="exampleInputEmail1" className="form-label text-muted">Email address</label>
-                                    <input ref={emailRef} type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required />
+                                    <input ref={emailRef} placeholder="Enter email" type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required />
                                     <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
                                 </div>
                                 <div className="mb-3">
                                     <label htmlFor="exampleInputPassword1" className="form-label text-muted">Password</label>
-                                    <input ref={passwordRef} type="password" className="form-control" id="exampleInputPassword1" required />
+                                    <input ref={passwordRef} placeholder="password" type="password" className="form-control" id="exampleInputPassword1" required />
                                 </div>
                                 <div className='my-4 d-grid'>
-                                    <button type="submit" className="btn rounded-pill text-white fw-bold bg-info">Login Here</button>
+                                    <button type="submit" className="btn text-white fw-bold btn-outline-info">
+                                        <FontAwesomeIcon icon={faSignIn}/>  Login Here</button>
                                 </div>
                             </div>
                             <p className='mt-2 text-muted'>Have no account? <Link onClick={navigateRegister} to='/register' className='text-decoration-none pe-auto text-info'>Please Register</Link></p>

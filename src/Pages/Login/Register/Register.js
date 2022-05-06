@@ -3,6 +3,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import img from '../../../images/register.jpg';
 import auth from '../../../firebase.init';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faRegistered, faSignInAlt } from '@fortawesome/free-solid-svg-icons';
 
 const Register = () => {
     const navigate = useNavigate();
@@ -56,7 +58,8 @@ const Register = () => {
                                     <input ref={passwordRef} type="password" className="form-control" id="exampleInputPassword1" required />
                                 </div>
                                 <div className='my-4 d-grid'>
-                                    <button type="submit" className="btn rounded-pill text-white fw-bold bg-info">Register</button>
+                                    <button type="submit" className="btn text-white fw-bold btn-outline-info">
+                                        <FontAwesomeIcon icon={faSignInAlt}/> Register</button>
                                 </div>
                             </div>
                             <p className='mt-2 text-muted'>Already registered? <Link onClick={navigateLogin} to='/login' className='text-decoration-none pe-auto text-info'>Please Login</Link></p>
