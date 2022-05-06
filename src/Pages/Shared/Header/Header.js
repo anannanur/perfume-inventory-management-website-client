@@ -16,11 +16,11 @@ const Header = () => {
     return (       
             <Navbar sticky="top" collapseOnSelect expand="lg" bg="dark" variant="dark">
                 <Container>
-                    <Navbar.Brand as={Link} to="/">Perfume</Navbar.Brand>
+                    <Navbar.Brand as={Link} to="/home#banner">Perfume</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="ms-auto">
-                            <Nav.Link className="fs-5 me-1" as={Link} to="/">Home</Nav.Link>
+                            <Nav.Link className="fs-5 me-1" as={Link} to="/home#banner">Home</Nav.Link>
                             <Nav.Link className="fs-5 me-1" as={Link} to="/manageitems">Manage Inventory</Nav.Link>
                             <Nav.Link className="fs-5 me-1" as={Link} to="/myitem">My Item</Nav.Link>
                            {

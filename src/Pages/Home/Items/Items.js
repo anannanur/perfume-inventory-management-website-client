@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+
+
 import Item from '../Item/Item';
 import './Items.css';
 
 const Items = () => {
+    
     const [items, setItems] = useState([]);
     useEffect(() => {
-        fetch('items.json')
+        fetch('http://localhost:5000/perfume')
             .then(res => res.json())
             .then(data => setItems(data))
     }, []);
@@ -15,13 +19,13 @@ const Items = () => {
             <h1 className='item-title pt-3 pb-5 fw-bold text-dark'>Inventory Items</h1>
             <div className='item-container'>
                 {
-                    items.map(item => <Item
-                        key={item.id}
+                    items.slice(0, 6).map(item => <Item
+                        key={item._id}
                         item={item}></Item>)
                 }
             </div>
             <div className='text-center mt-5'>
-                <button type="button" class="btn btn-link">Manage Inventories</button>
+                <Link to='/manageitems' className='btn btn-dark text-white fw-bold'>Manage Inventory</Link>
             </div>
         </div>
     );

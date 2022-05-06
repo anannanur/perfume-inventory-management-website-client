@@ -24,10 +24,21 @@ function App() {
             <SingleItem />
           </RequireAuth>
         } />
-
-        <Route path="/manageitems" element={<ManageItems />} />
-
-        <Route path="/myitem" element={<MyItem />} />
+        <Route path="/manageitems" element={
+          <RequireAuth>
+            <ManageItems />
+          </RequireAuth>
+        } />
+        {/* <Route path="/additem" element={
+          <RequireAuth>
+            <ManageItems />
+          </RequireAuth>
+        } /> */}
+        <Route path="/myitem" element={
+          <RequireAuth>
+           <MyItem />
+          </RequireAuth>
+        } />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path='*' element={<NotFound />} />

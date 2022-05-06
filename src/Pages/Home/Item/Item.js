@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './Item.css';
 
 const Item = ({ item }) => {
-    const { id, name, img, description, price, quantity, supplier } = item;
+    const { _id, name, img, description, price, quantity, supplier } = item;
     const navigate = useNavigate();
     const navigateToSingleItem = id => {
         navigate(`/inventory/${id}`);
@@ -16,7 +16,7 @@ const Item = ({ item }) => {
             <p className='text-danger fw-bold'>Price: ৳{price}</p>
             <p className='text-primary fw-bold'><small>Quantity: {quantity}</small></p>
             <p className='text-success fw-bold'><small>Supplier: {supplier}</small></p>
-            <button onClick={() => navigateToSingleItem(id)} className='btn-style'>Stock Update</button>
+            <button onClick={() => navigateToSingleItem(_id)} className='btn-style'>Stock Update</button>
         </div>
     );
 };

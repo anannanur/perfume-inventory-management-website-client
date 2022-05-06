@@ -3,7 +3,7 @@ import './Banner.css';
 
 const Banner = () => {
     return (
-        <div className="animation-area">
+        <div id='/home#banner' className="animation-area">
             <div className="banner-title">
                 <h1>Welcome to <span>Perfume</span> Inventory System..</h1>
             </div>

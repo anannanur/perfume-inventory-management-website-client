@@ -1,32 +1,33 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 const SingleItem = () => {
     const { id } = useParams();
-    const [items, setItems] = useState([]);
+    const [item, setItem] = useState({});
+
     useEffect(() => {
-        fetch('/items.json')
+        const url = `http://localhost:5000/perfume/${id}`;
+        fetch(url)
             .then(res => res.json())
-            .then(data => setItems(data))
-    }, []);
-    const clickedItem = items.find(item => item.id === parseInt(id));
+            .then(data => setItem(data))
+    }, [id]);
 
     return (
         <div className='container py-5'>
             <div className="card py-5 shadow-lg rounded">
                 <div className="row g-0">
                     <div className="col-md-4 mt-4" style={{ textAlign: 'center' }}>
-                        <img src={clickedItem?.img} className="img-fluid rounded-start" alt="..." />
+                        <img src={item?.img} className="img-fluid rounded-start" alt="..." />
                     </div>
                     <div className="col-md-8">
                         <div className="card-body">
-                            <h4 className="card-title fw-bold" style={{ color: 'goldenrod' }}>{clickedItem?.name}</h4>
-                            <p className="card-text text-muted">{clickedItem?.description}</p>
-                            <p className="card-text"><small className="text-dark fw-bold">id: {clickedItem?.id}</small></p>
-                            <p className="card-text"><small className="text-secondary fw-bold">Sold: {clickedItem?.sold}</small></p>
-                            <p className="card-text"><small className="text-primary fw-bold">Quantity: {clickedItem?.quantity}</small></p>
-                            <p className="card-text"><small className="text-danger fw-bold">Price: ৳{clickedItem?.price}</small></p>
-                            <p className="card-text"><small className="text-success fw-bold">Supplier: {clickedItem?.supplier}</small></p>
+                            <h4 className="card-title fw-bold" style={{ color: 'goldenrod' }}>{item?.name}</h4>
+                            <p className="card-text text-muted">{item?.description}</p>
+                            <p className="card-text"><small className="text-dark fw-bold">id: {item?.id}</small></p>
+                            <p className="card-text"><small className="text-secondary fw-bold">Sold: {item?.sold}</small></p>
+                            <p className="card-text"><small className="text-primary fw-bold">Quantity: {item?.quantity}</small></p>
+                            <p className="card-text"><small className="text-danger fw-bold">Price: ৳{item?.price}</small></p>
+                            <p className="card-text"><small className="text-success fw-bold">Supplier: {item?.supplier}</small></p>
                             <button className='btn btn-success'>Delivered</button>
 
                         </div>
@@ -38,7 +39,7 @@ const SingleItem = () => {
                 </div>
             </div>
             <div className='text-center mt-5'>
-                <button type="button" class="btn btn-link">Manage Inventories</button>
+                <Link to="/manageitems" class="btn btn-dark text-white fw-bold">Manage Inventories</Link>
             </div>
         </div>
 

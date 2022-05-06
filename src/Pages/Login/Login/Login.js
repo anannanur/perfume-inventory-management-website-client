@@ -103,7 +103,7 @@ const Login = () => {
                                         <FontAwesomeIcon icon={faSignIn} />  Login Here</button>
                                 </div>
                                 <p className='mt-2 text-muted'>Have no account? <Link onClick={navigateRegister} to='/register' className='text-decoration-none pe-auto text-info'>Please Register</Link></p>
-                                <p className='mt-2 text-white'>Forgot password? <Link onClick={resetPassword} to='/login' className='text-decoration-none pe-auto text-info' data-bs-toggle="modal" data-bs-target="#exampleModal">Reset please</Link></p>
+                                <p className='mt-2 text-white'>Forgot password? <Link onClick={resetPassword} to='/login' className='text-decoration-none pe-auto text-info'>Reset please</Link></p>
                             </div>
 
                             <div className='text-center'>

@@ -6,8 +6,7 @@ import Statistics from '../Statistics/Statistics';
 const Home = () => {
     return (
         <div>
-            <Banner></Banner>
-            
+            <Banner></Banner>           
             <Items></Items>
             <Statistics></Statistics>
         </div>
