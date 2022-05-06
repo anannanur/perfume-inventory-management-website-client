@@ -1,17 +1,34 @@
 import React, { useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import img from '../../../images/login.jpg';
 import './Login.css';
+import auth from '../../../firebase.init';
 
 const Login = () => {
     const emailRef = useRef('');
     const passwordRef = useRef('');
     const navigate = useNavigate();
+
+    const [
+        signInWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useSignInWithEmailAndPassword(auth);
+
+    // user login 
     const handleSubmit = event => {
         event.preventDefault();
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
+        signInWithEmailAndPassword(email,password);
     }
+
+    if(user){
+        navigate('/home');
+    }
+    
     const navigateRegister = event => {
         navigate(`/register`);
     }
@@ -41,7 +58,7 @@ const Login = () => {
                                 </div>
                             </div>
                             <p className='mt-2 text-muted'>Have no account? <Link onClick={navigateRegister} to='/register' className='text-decoration-none pe-auto text-info'>Please Register</Link></p>
-                            
+
                         </form>
                     </div>
                 </div>

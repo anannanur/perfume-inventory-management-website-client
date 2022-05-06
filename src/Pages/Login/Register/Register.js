@@ -1,6 +1,8 @@
 import React, { useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import img from '../../../images/register.jpg';
+import auth from '../../../firebase.init';
 
 const Register = () => {
     const navigate = useNavigate();
@@ -8,8 +10,26 @@ const Register = () => {
     const passwordRef = useRef('');
     const userNameRef = useRef('');
 
+    const [
+        createUserWithEmailAndPassword,
+        user,
+        loading,
+        error,
+      ] = useCreateUserWithEmailAndPassword(auth);
+
     const navigateLogin = event => {
         navigate(`/login`);
+    }
+
+    // user registration 
+    const handleRegister = event => {
+        event.preventDefault();
+        const email = emailRef.current.value;
+        const password = passwordRef.current.value;
+        createUserWithEmailAndPassword(email,password);
+    }
+    if(user){
+        navigate('/home');
     }
     return (
         <div className='login py-5 bg-dark'>
@@ -20,7 +40,7 @@ const Register = () => {
                     </div>
                     <div className="col-12 col-md-6 px-5">
                         <h1 className='text-center pt-3 fw-bold text-info'>Please Register</h1>
-                        <form>
+                        <form onSubmit={handleRegister}>
                             <div>
                                 <div className="mb-3">
                                     <label htmlFor="exampleInputtext" className="form-label text-muted">Your Name</label>
