@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
-import  Header  from './Pages/Shared/Header/Header'
-import  Footer from './Pages/Shared/Footer/Footer';
+import Header from './Pages/Shared/Header/Header'
+import Footer from './Pages/Shared/Footer/Footer';
 import './App.css';
 import Home from './Pages/Home/Home/Home';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -10,6 +10,7 @@ import SingleItem from './Pages/SingleItem/SingleItem';
 import NotFound from './Pages/Shared/NotFound/NotFound';
 import Login from './Pages/Login/Login/Login';
 import Register from './Pages/Login/Register/Register';
+import RequireAuth from './Pages/Login/RequireAuth/RequireAuth';
 
 function App() {
   return (
@@ -18,14 +19,18 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/inventory/:id" element={<SingleItem/>} />
-     
+        <Route path="/inventory/:id" element={
+          <RequireAuth>
+            <SingleItem />
+          </RequireAuth>
+        } />
+
         <Route path="/manageitems" element={<ManageItems />} />
-      
+
         <Route path="/myitem" element={<MyItem />} />
-        <Route path="/login" element={<Login/>} />
-        <Route path="/register" element={<Register/>} />
-        <Route path='*' element={<NotFound/>}/>
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path='*' element={<NotFound />} />
       </Routes>
       <Footer></Footer>
     </div>

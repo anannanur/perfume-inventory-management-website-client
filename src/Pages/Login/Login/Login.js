@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import img from '../../../images/login.jpg';
 import './Login.css';
@@ -9,6 +9,10 @@ const Login = () => {
     const emailRef = useRef('');
     const passwordRef = useRef('');
     const navigate = useNavigate();
+    const location = useLocation();
+
+    // user redirect 
+    let from = location.state?.from?.pathname || "/";
 
     const [
         signInWithEmailAndPassword,
@@ -26,9 +30,9 @@ const Login = () => {
     }
 
     if(user){
-        navigate('/home');
+       navigate(from, {replace: true});
     }
-    
+
     const navigateRegister = event => {
         navigate(`/register`);
     }
