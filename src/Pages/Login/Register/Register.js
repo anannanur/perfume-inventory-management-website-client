@@ -1,10 +1,10 @@
 import React, { useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import img from '../../../images/register.jpg';
 import auth from '../../../firebase.init';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faRegistered, faSignInAlt } from '@fortawesome/free-solid-svg-icons';
+import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
 
 const Register = () => {
     const navigate = useNavigate();
@@ -17,22 +17,27 @@ const Register = () => {
         user,
         loading,
         error,
-      ] = useCreateUserWithEmailAndPassword(auth);
+    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+
+    const [updateProfile] = useUpdateProfile(auth);
 
     const navigateLogin = event => {
         navigate(`/login`);
     }
 
     // user registration 
-    const handleRegister = event => {
+    const handleRegister = async (event) => {
         event.preventDefault();
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
-        createUserWithEmailAndPassword(email,password);
-    }
-    if(user){
+        const displayName = userNameRef.current.value;
+        await createUserWithEmailAndPassword(email, password);
+        await updateProfile({ displayName });
         navigate('/home');
+        alert('updated profile');
+
     }
+
     return (
         <div className='login py-5 bg-dark'>
             <div className="container">
@@ -59,15 +64,12 @@ const Register = () => {
                                 </div>
                                 <div className='my-4 d-grid'>
                                     <button type="submit" className="btn text-white fw-bold btn-outline-info">
-                                        <FontAwesomeIcon icon={faSignInAlt}/> Register</button>
+                                        <FontAwesomeIcon icon={faSignInAlt} /> Register</button>
                                 </div>
                             </div>
                             <p className='mt-2 text-muted'>Already registered? <Link onClick={navigateLogin} to='/login' className='text-decoration-none pe-auto text-info'>Please Login</Link></p>
-                            {/* <div className='d-flex'>
-                                <p className='mt-2'>Forgot Password?</p>
-                                <button  className='btn btn-link pt-0 mt-0 text-decoration-none' style={{ color: '#ea8685' }}>Please Reset</button>
-                            </div> */}
                         </form>
+
                     </div>
                 </div>
             </div>

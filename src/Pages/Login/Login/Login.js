@@ -1,18 +1,21 @@
 import React, { useRef } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import img from '../../../images/login.jpg';
 import './Login.css';
 import auth from '../../../firebase.init';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSignIn } from '@fortawesome/free-solid-svg-icons';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'
 
 const Login = () => {
     const emailRef = useRef('');
     const passwordRef = useRef('');
     const navigate = useNavigate();
     const location = useLocation();
+    let msg;
 
     // user redirect 
     let from = location.state?.from?.pathname || "/";
@@ -23,6 +26,8 @@ const Login = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
+
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
     // user login 
     const handleSubmit = event => {
@@ -39,8 +44,35 @@ const Login = () => {
     const navigateRegister = event => {
         navigate(`/register`);
     }
+    let errorMsg;
+
+    // error handling 
+    if (error) {
+        errorMsg = <div className='bg-danger text-center rounded d-inline-block p-2 mt-3'>
+            <span className='text-white'>Error: {error.message}</span>
+        </div>
+    }
+
+    // reset password 
+    const resetPassword = async () => {
+        const email = emailRef.current.value;
+        if (email === '') {
+            toast.error('please enter your email address',{
+                position: toast.POSITION.TOP_CENTER,
+                theme: "colored"
+            });          
+        }
+        else {
+            await sendPasswordResetEmail(email);
+            toast.success("Email has been sent!!", {
+                position: toast.POSITION.TOP_CENTER,
+                theme: "colored"
+              });
+        }
+    }
     return (
         <div className='login py-5 bg-dark'>
+            <ToastContainer/>
             <div className="container">
                 <h1 className='text-center pb-5 fw-bold text-info'>Please Login</h1>
                 <div className="row">
@@ -48,8 +80,8 @@ const Login = () => {
                         <img className="w-100 img-fluid" src={img} alt="" />
                     </div>
                     <div className="col-12 col-md-6 px-5">
+                        <SocialLogin></SocialLogin>
                         <form onSubmit={handleSubmit}>
-                            <SocialLogin></SocialLogin>
                             <div>
                                 <div className="mb-3">
                                     <label htmlFor="exampleInputEmail1" className="form-label text-muted">Email address</label>
@@ -62,11 +94,15 @@ const Login = () => {
                                 </div>
                                 <div className='my-4 d-grid'>
                                     <button type="submit" className="btn text-white fw-bold btn-outline-info">
-                                        <FontAwesomeIcon icon={faSignIn}/>  Login Here</button>
+                                        <FontAwesomeIcon icon={faSignIn} />  Login Here</button>
                                 </div>
+                                <p className='mt-2 text-muted'>Have no account? <Link onClick={navigateRegister} to='/register' className='text-decoration-none pe-auto text-info'>Please Register</Link></p>
+                                <p className='mt-2 text-white'>Forgot password? <Link onClick={resetPassword} to='/login' className='text-decoration-none pe-auto text-info' data-bs-toggle="modal" data-bs-target="#exampleModal">Reset please</Link></p>
                             </div>
-                            <p className='mt-2 text-muted'>Have no account? <Link onClick={navigateRegister} to='/register' className='text-decoration-none pe-auto text-info'>Please Register</Link></p>
 
+                            <div className='text-center'>
+                                {errorMsg}
+                            </div>
                         </form>
                     </div>
                 </div>
