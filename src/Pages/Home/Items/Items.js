@@ -20,6 +20,9 @@ const Items = () => {
                         item={item}></Item>)
                 }
             </div>
+            <div className='text-center mt-5'>
+                <button type="button" class="btn btn-link">Manage Inventories</button>
+            </div>
         </div>
     );
 };
