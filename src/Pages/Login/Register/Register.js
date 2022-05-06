@@ -11,11 +11,10 @@ const Register = () => {
     const emailRef = useRef('');
     const passwordRef = useRef('');
     const userNameRef = useRef('');
+    let errorMsg;
 
     const [
         createUserWithEmailAndPassword,
-        user,
-        loading,
         error,
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
@@ -23,6 +22,15 @@ const Register = () => {
 
     const navigateLogin = event => {
         navigate(`/login`);
+    }
+
+
+
+    // error handling 
+    if (error) {
+        errorMsg = <p>{error.message}</p>;
+           
+    
     }
 
     // user registration 
@@ -33,15 +41,15 @@ const Register = () => {
         const displayName = userNameRef.current.value;
         await createUserWithEmailAndPassword(email, password);
         await updateProfile({ displayName });
-        navigate('/home');
         alert('updated profile');
+        navigate('/home');
 
     }
 
     return (
-        <div className='login py-5 bg-dark'>
+        <div className='register py-5 bg-dark'>
             <div className="container">
-                <div className="row">
+                <div className="row pt-1">
                     <div className="col-12 col-md-6 text-center px-5">
                         <img className="w-100 img-fluid" src={img} alt="" />
                     </div>
@@ -68,8 +76,10 @@ const Register = () => {
                                 </div>
                             </div>
                             <p className='mt-2 text-muted'>Already registered? <Link onClick={navigateLogin} to='/login' className='text-decoration-none pe-auto text-info'>Please Login</Link></p>
-                        </form>
 
+                            {errorMsg}
+
+                        </form>
                     </div>
                 </div>
             </div>

@@ -9,13 +9,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSignIn } from '@fortawesome/free-solid-svg-icons';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
+import Loading from '../../Shared/Loading/Loading';
 
 const Login = () => {
     const emailRef = useRef('');
     const passwordRef = useRef('');
     const navigate = useNavigate();
     const location = useLocation();
-    let msg;
 
     // user redirect 
     let from = location.state?.from?.pathname || "/";
@@ -45,12 +45,17 @@ const Login = () => {
         navigate(`/register`);
     }
     let errorMsg;
+    let loader;
 
     // error handling 
     if (error) {
         errorMsg = <div className='bg-danger text-center rounded d-inline-block p-2 mt-3'>
             <span className='text-white'>Error: {error.message}</span>
         </div>
+    }
+    if (loading || sending) {
+        loader = 
+        <Loading/>
     }
 
     // reset password 
@@ -72,6 +77,7 @@ const Login = () => {
     }
     return (
         <div className='login py-5 bg-dark'>
+            {loader}
             <ToastContainer/>
             <div className="container">
                 <h1 className='text-center pb-5 fw-bold text-info'>Please Login</h1>

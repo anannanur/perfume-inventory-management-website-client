@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button, Spinner } from 'react-bootstrap';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
@@ -9,15 +10,28 @@ const SocialLogin = () => {
     const navigate = useNavigate();
     const location = useLocation();
     let errorMsg;
+    let loader;
 
     // error handling 
     if (error) {
         errorMsg = <div className='bg-danger text-center rounded d-inline-block p-2 mt-3'>
             <span className='text-white'>Error: {error.message}</span>
         </div>
-
     }
-    
+    if (loading) {
+        loader = <Button variant="info" disabled className='mb-3'>
+            <Spinner
+                as="span"
+                animation="grow"
+                size="sm"
+                role="status"
+                aria-hidden="true"
+                className='me-1'
+            />
+            Loading...
+        </Button>
+    }
+
     // user redirect if he/she will sign in with google
     let from = location.state?.from?.pathname || "/";
     if (user) {
@@ -26,6 +40,7 @@ const SocialLogin = () => {
 
     return (
         <div className='text-center'>
+            {loader}
             <div className='text-center'>
                 <button onClick={() => signInWithGoogle()} className='btn btn-outline-info fw-bold text-white'>
                     <img className="rounded-circle me-1" style={{ width: '22px', transform: 'scale(1)' }} src={google} alt='' />
