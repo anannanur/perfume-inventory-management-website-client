@@ -8,6 +8,8 @@ import ManageItems from './Pages/ManageItems/ManageItems';
 import MyItem from './Pages/MyItem/MyItem';
 import SingleItem from './Pages/SingleItem/SingleItem';
 import NotFound from './Pages/Shared/NotFound/NotFound';
+import Login from './Pages/Login/Login/Login';
+import Register from './Pages/Login/Register/Register';
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
         <Route path="/manageitems" element={<ManageItems />} />
       
         <Route path="/myitem" element={<MyItem />} />
+        <Route path="/login" element={<Login/>} />
+        <Route path="/register" element={<Register/>} />
         <Route path='*' element={<NotFound/>}/>
       </Routes>
       <Footer></Footer>
