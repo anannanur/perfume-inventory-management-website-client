@@ -42,15 +42,15 @@ const SocialLogin = () => {
         <div className='text-center'>
             {loader}
             <div className='text-center'>
-                <button onClick={() => signInWithGoogle()} className='btn btn-outline-info fw-bold text-white'>
+                <button onClick={() => signInWithGoogle()} className='btn btn-warning fw-bold text-dark'>
                     <img className="rounded-circle me-1" style={{ width: '22px', transform: 'scale(1)' }} src={google} alt='' />
                     Google Sign In</button>
             </div>
             {errorMsg}
             <div className='d-flex align-items-center justify-content-center'>
-                <div style={{ height: '1px' }} className='w-25 bg-info'></div>
-                <p className='mt-2 px-2 text-info'>or</p>
-                <div style={{ height: '1px' }} className='w-25 bg-info'></div>
+                <div style={{ height: '1px' }} className='w-25 bg-warning'></div>
+                <p className='mt-2 px-2 text-warning'>or</p>
+                <div style={{ height: '1px' }} className='w-25 bg-warning'></div>
             </div>
         </div>
     );

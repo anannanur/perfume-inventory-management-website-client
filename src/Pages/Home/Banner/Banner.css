@@ -1,22 +1,31 @@
-.banner-title h1{
-    color: rgb(180, 179, 178);
-    text-align: center;
-    font-size: 60px;
-    font-weight: 600;
-    padding-top: 22%;
+.banner {
+	position: relative;
 }
-.banner-title span{
-    font-family: 'Oleo Script', cursive;
-    color: rgb(225, 168, 23);
-    font-weight: 400;
+
+.banner-title {
+	color: rgb(180, 179, 178);
+	text-align: center;
+	font-size: 50px;
+	font-weight: 600;
+	position: absolute;
+	top: 52%;
+	left: 8.5%;
 }
+
+.banner-title span {
+	font-family: 'Oleo Script', cursive;
+	color: rgb(225, 168, 23);
+	font-weight: 400;
+}
+
 .animation-area {
-    background-image: url(../../../images/banner.png);
+	background-image: url(../../../images/banner.png);
 	width: 100%;
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
 }
+
 .box-area {
 	position: absolute;
 	top: 0;
@@ -25,6 +34,7 @@
 	height: 100%;
 	overflow: hidden;
 }
+
 .box-area li {
 	position: absolute;
 	display: block;
@@ -35,12 +45,14 @@
 	animation: animate 20s linear infinite;
 	bottom: -150px;
 }
+
 .box-area li:nth-child(1) {
 	left: 86%;
 	width: 80px;
 	height: 80px;
 	animation-delay: 0s;
 }
+
 .box-area li:nth-child(2) {
 	left: 12%;
 	width: 30px;
@@ -48,12 +60,14 @@
 	animation-delay: 1.5s;
 	animation-duration: 10s;
 }
+
 .box-area li:nth-child(3) {
 	left: 70%;
 	width: 100px;
 	height: 100px;
 	animation-delay: 5.5s;
 }
+
 .box-area li:nth-child(4) {
 	left: 42%;
 	width: 150px;
@@ -61,50 +75,120 @@
 	animation-delay: 0s;
 	animation-duration: 15s;
 }
+
 .box-area li:nth-child(5) {
 	left: 65%;
 	width: 40px;
 	height: 40px;
 	animation-delay: 0s;
 }
+
 .box-area li:nth-child(6) {
 	left: 15%;
 	width: 110px;
 	height: 110px;
 	animation-delay: 3.5s;
 }
+
 @keyframes animate {
 	0% {
 		transform: translateY(0) rotate(0deg);
 		opacity: 1;
 	}
+
 	100% {
 		transform: translateY(-800px) rotate(360deg);
 		opacity: 0;
 	}
 }
+
 /* responsive  */
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 390px) {
+	.banner-title {
+		font-size: 14px;
+		text-align: center;
+		overflow-x: hidden;
+		top: 40%;
+		left: 3%;		
+	}
+}
+
+ @media screen and (min-width: 390px) and (max-width: 411px) {
     .banner-title{
-        padding-top: 60%;
+		font-size: 15px;
+		text-align: center;
+		overflow-x: hidden;
+		top: 45%;
+		left: 4%;
     }
-    .banner-title h1{   
-        font-size: 18px;  
+	
+}
+ @media screen and (min-width: 411px) and (max-width: 430px) {
+    .banner-title{
+		font-size: 15px;
+		text-align: center;
+		overflow-x: hidden;
+		top: 45%;
+		left: 5%;
+    }
+	
+}
+ @media screen and (min-width: 430px) and (max-width: 490px) {
+    .banner-title{
+		font-size: 15px;
+		text-align: center;
+		overflow-x: hidden;
+		top: 45%;
+		left: 12%;
+    }
+	
+}
+ @media screen and (min-width: 490px) and (max-width: 600px) {
+    .banner-title{
+		font-size: 16px;
+		text-align: center;
+		overflow-x: hidden;
+		top: 45%;
+		left: 9%;
+    }
+	
+}
+ @media screen and (min-width: 601px) and (max-width: 768px) {
+    .banner-title{
+		font-size: 20px;
+		text-align: center;
+		overflow-x: hidden;
+		top: 55%;
+		left: 9%;
+    }
+	
+}
+ @media screen and (min-width: 769px) and (max-width: 992px) {
+    .banner-title{
+		font-size: 25px;
+		text-align: center;
+		overflow-x: hidden;
+		top: 55%;
+		left: 9%;
+    }
+	
+}
+ @media screen and (min-width: 993px) and (max-width: 1200px) {
+    .banner-title{
+		font-size: 25px;
+		text-align: center;
+		overflow-x: hidden;
+		top: 55%;
+		left: 9%;
     }
 }
-@media screen and (min-width: 451px) and (max-width: 576px) {
+ @media screen and (min-width: 1201px) and (max-width: 1400px) {
     .banner-title{
-        padding-top: 50%;
+		font-size: 30px;
+		text-align: center;
+		overflow-x: hidden;
+		top: 55%;
+		left: 9%;
     }
-    .banner-title h1{   
-        font-size: 25px;  
-    }
-}
-@media screen and (min-width: 577px) and (max-width: 992px){
-    .banner-title{
-        padding-top: 10%;
-    }
-    .banner-title h1{   
-        font-size: 35px;  
-    }
+	
 }

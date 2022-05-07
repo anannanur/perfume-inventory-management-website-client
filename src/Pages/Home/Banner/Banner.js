@@ -3,18 +3,18 @@ import './Banner.css';
 
 const Banner = () => {
     return (
-        <div id='/home#banner' className="animation-area">
-            <div className="banner-title">
-                <h1>Welcome to <span>Perfume</span> Inventory System..</h1>
+        <div className='banner'>
+            <div id='/home#banner' className="animation-area">
+                <h1 className='banner-title'>Welcome to <span>Perfume</span> Inventory Management System..</h1>
+                <ul class="box-area">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
             </div>
-            <ul class="box-area">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
         </div>
     );
 };
