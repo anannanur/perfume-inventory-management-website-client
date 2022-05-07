@@ -31,7 +31,7 @@ const ManageItems = () => {
         // }
     }
     const confirm = id => {
-        const url = `http://localhost:5000/perfume/${id}`;
+        const url = `https://frozen-ocean-17527.herokuapp.com/perfume/${id}`;
         fetch(url, {
             method: 'DELETE'
         })

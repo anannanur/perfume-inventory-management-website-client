@@ -13,7 +13,7 @@ const AddItem = () => {
 
     const onSubmit = data => {
         console.log(data);
-        const url = `http://localhost:5000/perfume`;
+        const url = `https://frozen-ocean-17527.herokuapp.com/perfume`;
         fetch(url, {
             method: 'POST',
             headers: {
@@ -25,7 +25,7 @@ const AddItem = () => {
             .then(result => {
                 console.log(result);
             })
-        const url2 = `http://localhost:5000/myitem`;
+        const url2 = `https://frozen-ocean-17527.herokuapp.com/myitem`;
         fetch(url2, {
             method: 'POST',
             headers: {

@@ -12,7 +12,7 @@ const MyItem = () => {
     useEffect(() => {
         const email = user.email;
         console.log(email);
-        const url = `http://localhost:5000/myitem?email=${email}`;
+        const url = `https://frozen-ocean-17527.herokuapp.com/myitem?email=${email}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setmyItems(data))
@@ -21,7 +21,7 @@ const MyItem = () => {
     const handleDelete = id => {
         const confirm = window.confirm('Are you sure?');
         if (confirm) {
-            const url = `http://localhost:5000/myitem/${id}`;
+            const url = `https://frozen-ocean-17527.herokuapp.com/myitem/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
@@ -32,7 +32,7 @@ const MyItem = () => {
                     setmyItems(remainedItems);
                     toast('deleted');
                 })
-            const url2 = `http://localhost:5000/perfume/${id}`;
+            const url2 = `https://frozen-ocean-17527.herokuapp.com/perfume/${id}`;
             fetch(url2, {
                 method: 'DELETE'
             })
