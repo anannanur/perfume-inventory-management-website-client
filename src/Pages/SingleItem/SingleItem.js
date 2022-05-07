@@ -23,7 +23,7 @@ const SingleItem = () => {
                         <div className="card-body">
                             <h4 className="card-title fw-bold" style={{ color: 'goldenrod' }}>{item?.name}</h4>
                             <p className="card-text text-muted">{item?.description}</p>
-                            <p className="card-text"><small className="text-dark fw-bold">id: {item?.id}</small></p>
+                            <p className="card-text"><small className="text-dark fw-bold">id: {item?._id}</small></p>
                             <p className="card-text"><small className="text-secondary fw-bold">Sold: {item?.sold}</small></p>
                             <p className="card-text"><small className="text-primary fw-bold">Quantity: {item?.quantity}</small></p>
                             <p className="card-text"><small className="text-danger fw-bold">Price: ৳{item?.price}</small></p>
