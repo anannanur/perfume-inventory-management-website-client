@@ -11,6 +11,8 @@ import NotFound from './Pages/Shared/NotFound/NotFound';
 import Login from './Pages/Login/Login/Login';
 import Register from './Pages/Login/Register/Register';
 import RequireAuth from './Pages/Login/RequireAuth/RequireAuth';
+import AddItem from './Pages/AddItem/AddItem';
+import Blog from './Pages/Blog/Blog';
 
 function App() {
   return (
@@ -28,17 +30,18 @@ function App() {
           <RequireAuth>
             <ManageItems />
           </RequireAuth>
-        } />
-        {/* <Route path="/additem" element={
+        }/>
+        <Route path="/additem" element={
           <RequireAuth>
-            <ManageItems />
+            <AddItem/>
           </RequireAuth>
-        } /> */}
+        }/>
         <Route path="/myitem" element={
           <RequireAuth>
-           <MyItem />
+            <MyItem />
           </RequireAuth>
-        } />
+        }/>
+        <Route path="/blog" element={<Blog/>}/>
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path='*' element={<NotFound />} />

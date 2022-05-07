@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import ManageItem from '../ManageItem/ManageItem';
 
 const ManageItems = () => {
@@ -22,7 +23,8 @@ const ManageItems = () => {
                 </div>
             </div>
             <div className='text-center mt-5'>
-                <button type="button" className="btn btn-warning">Add New Item</button>
+                <Link to='/additem' style={{ backgroundColor: 'green' }} className='btn rounded btn-lg text-white fw-bold'>Add New Item</Link>
+
             </div>
         </div>
     );

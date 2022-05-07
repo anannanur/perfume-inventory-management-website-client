@@ -13,26 +13,32 @@ const Header = () => {
     const handleLogout = () => {
         signOut(auth);
     }
-    return (       
-            <Navbar sticky="top" collapseOnSelect expand="lg" bg="dark" variant="dark">
-                <Container>
-                    <Navbar.Brand as={Link} to="/home#banner">Perfume</Navbar.Brand>
-                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                    <Navbar.Collapse id="responsive-navbar-nav">
-                        <Nav className="ms-auto">
-                            <Nav.Link className="fs-5 me-1" as={Link} to="/home#banner">Home</Nav.Link>
-                            <Nav.Link className="fs-5 me-1" as={Link} to="/manageitems">Manage Inventory</Nav.Link>
-                            <Nav.Link className="fs-5 me-1" as={Link} to="/myitem">My Item</Nav.Link>
-                           {
-                               user ? 
-                                <button onClick={handleLogout} style={{backgroundColor:'goldenrod'}} className='btn ms-1 fw-bold text-white'>Logout</button>
-                               :
-                                <Nav.Link className="fs-5 me-1" as={Link} to="/login">Login</Nav.Link>
-                           }
-                        </Nav>
-                    </Navbar.Collapse>
-                </Container>
-            </Navbar>
+    return (
+        <Navbar sticky="top" collapseOnSelect expand="lg" bg="dark" variant="dark">
+            <Container>
+                <Navbar.Brand as={Link} to="/home#banner">Perfume</Navbar.Brand>
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                <Navbar.Collapse id="responsive-navbar-nav">
+                    <Nav className="ms-auto">
+                        <Nav.Link className="fs-5 me-1" as={Link} to="/home#banner">Home</Nav.Link>
+                        <Nav.Link className="fs-5 me-1" as={Link} to="/blog">Blog</Nav.Link>
+                        {
+                            user ?
+                                <>
+                                    <Nav.Link className="fs-5 me-1" as={Link} to="/manageitems">Manage Inventory</Nav.Link>
+                                    <Nav.Link className="fs-5 me-1" as={Link} to="/additem">Add Item</Nav.Link>
+                                    <Nav.Link className="fs-5 me-1" as={Link} to="/myitem">My Item</Nav.Link>
+                                    <button onClick={handleLogout} style={{ backgroundColor: 'goldenrod' }} className='btn ms-1 fw-bold text-white'>Logout</button>
+                                </>
+                                :
+                                <>                    
+                                    <Nav.Link className="fs-5 me-1" as={Link} to="/login">Login</Nav.Link>
+                                </>
+                        }
+                    </Nav>
+                </Navbar.Collapse>
+            </Container>
+        </Navbar>
     );
 };
 

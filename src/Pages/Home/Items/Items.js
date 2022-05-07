@@ -6,7 +6,7 @@ import Item from '../Item/Item';
 import './Items.css';
 
 const Items = () => {
-    
+
     const [items, setItems] = useState([]);
     useEffect(() => {
         fetch('http://localhost:5000/perfume')
@@ -24,8 +24,8 @@ const Items = () => {
                         item={item}></Item>)
                 }
             </div>
-            <div className='text-center mt-5'>
-                <Link to='/manageitems' className='btn btn-dark text-white fw-bold'>Manage Inventory</Link>
+            <div className="text-center mt-5 pt-3">
+                <Link to='/manageitems' style={{ backgroundColor: 'goldenrod' }} className='btn rounded btn-lg text-white fw-bold'>Manage Inventory</Link>
             </div>
         </div>
     );
