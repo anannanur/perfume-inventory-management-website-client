@@ -12,8 +12,7 @@ const SingleItem = () => {
             .then(data => setItem(data))
     }, [id]);
 
-
-
+    // handling delivered button 
     const confirmDelivered = () => {
         if (item.quantity < 1) {
             alert('You cant decrease the quantity anymore');
@@ -35,7 +34,7 @@ const SingleItem = () => {
         alert('Delivered!,So, item quantity has been decreased.')
     }
 
-
+    // handling quantity increasing /decreasing
     const handleQuantity = (event) => {
         event.preventDefault();
 

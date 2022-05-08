@@ -4,6 +4,7 @@ import auth from '../../firebase.init';
 // import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
 
 
 const MyItem = () => {
@@ -12,13 +13,13 @@ const MyItem = () => {
     const [myItems, setmyItems] = useState([]);
     useEffect(() => {
         const email = user.email;
-        //     console.log(email);
         const url = `http://localhost:5000/myitem?email=${email}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setmyItems(data))
     }, [user]);
 
+    // handle delete button 
     const handleDelete = id => {
         const confirm = window.confirm('Are you sure?');
         if (confirm) {
@@ -35,6 +36,11 @@ const MyItem = () => {
                     toast('deleted');
                 })
         }
+    }
+    // navigate tp single item
+    const navigate = useNavigate();
+    const navigateToSingleItem = id => {
+        navigate(`/inventory/${id}`);
     }
 
     return (
@@ -55,7 +61,7 @@ const MyItem = () => {
                                 </div>
                                 <div className="text-center bg-white py-3">
                                     <button onClick={() => handleDelete(myItem._id)} className='btn btn-danger text-white fw-bold me-2'>Delete</button>
-                                    <button className='btn btn-dark text-white'>Update</button>
+                                    <button onClick={() => navigateToSingleItem(myItem._id)} className='btn btn-dark text-white'>Update</button>
                                 </div>
                             </div>
                         </div>)

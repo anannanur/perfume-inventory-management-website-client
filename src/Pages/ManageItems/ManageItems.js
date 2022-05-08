@@ -27,13 +27,13 @@ const ManageItems = () => {
             fetch(url, {
                 method: 'DELETE'
             })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                const remainedItems = items.filter(item => item._id !== id);
-                setItems(remainedItems);
-                toast('deleted');
-            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    const remainedItems = items.filter(item => item._id !== id);
+                    setItems(remainedItems);
+                    toast('deleted');
+                })
         }
     }
 

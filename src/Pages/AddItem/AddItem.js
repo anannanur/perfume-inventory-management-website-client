@@ -8,6 +8,7 @@ import auth from '../../firebase.init';
 import './AddItem.css';
 
 const AddItem = () => {
+    // react hook form for adding item 
     const { register, handleSubmit } = useForm();
     const [val, setVal] = useState();
     const [user] = useAuthState(auth);
@@ -33,8 +34,6 @@ const AddItem = () => {
         )
     }
 
-
-
 return (
     <div className='addItem bg-dark pt-2 pb-5'>
         <h2 className='text-warning text-center pt-2 pb-4 fw-bold'>Add New Item</h2>
@@ -56,7 +55,7 @@ return (
                         </div>
                     </form>
                 </div>
-                <div className="col-12 col-md-6 text-center order-1 order-md-2">
+                <div className="col-12 col-md-6 text-center order-1 order-md-2 mt-3">
                     <img src={img} alt="" className='img-fluid ' />
                 </div>
                 <ToastContainer />
