@@ -6,7 +6,7 @@
         "price": 6250,
         "quantity": 5,
         "supplier" : "J M Fashion Ind",
-        "sold": 3
+        "sold": "yes"
     },
     {
         "name": "Chanel Chance Parfume",
@@ -15,7 +15,7 @@
         "price": 17500,
         "quantity": 3,
         "supplier" : "ASM Chemical Industries Ltd",
-        "sold": 4
+        "sold": "no"
 
     },
     {
@@ -25,7 +25,7 @@
         "price": 3753,
         "quantity": 5,
         "supplier" : "Oud Al Jannah",
-        "sold": 5
+        "sold": "yes"
 
     },
     {
@@ -35,7 +35,7 @@
         "price": 7250,
         "quantity": 3,
         "supplier" : "J M Fashion Ind",
-        "sold": 4
+        "sold": "yes"
 
     },
     {
@@ -45,7 +45,7 @@
         "price": 6250,
         "quantity": 5,
         "supplier" : "Oud Al Jannah",
-        "sold": 9
+        "sold": "no"
 
     },
     {
@@ -55,7 +55,7 @@
         "price": 8788,
         "quantity": 7,
         "supplier" : "ASM Chemical Industries Ltd",
-        "sold": 2
+        "sold": "yes"
 
     },
     {
@@ -65,7 +65,7 @@
         "quantity": 3,
         "description": "Goldea is a tribute to the golden goddess of beauty and sun. Gold is the divine interpretation of the splendor of the sun on earth. Unique expression of Bulgari perfumes, Goldea is a sensual and oriental fragrance that pays tribute to the olfactory richness",
         "supplier": "T.R Chemical Works",
-        "sold": 2
+        "sold": "no"
     },
     {
         "name":"Paco Rabanne Black",
@@ -74,7 +74,7 @@
         "quantity": 5,
         "description": "A classic redefined, Black XS for Her by Paco Rabanne features an intense oriental woody accord that breaths new life into the fragrance. Cranberries spiced with tamarind and pink pepper give a sharp sweet and sour taste",
         "supplier": "Abdul Basit Agor Ator Industry",
-        "sold": 4
+        "sold": "yes"
     },
     {
         "name":"Gucci Bamboo EDP",
@@ -83,7 +83,7 @@
         "quantity": 3,
         "description": "Top notes of bergamot. Heart notes of casablanca lily and ylang ylang extra-comoros. Base notes of sandalwood.",
         "supplier": "T.R Chemical Works",
-        "sold": 6
+        "sold": "no"
     },
     {
         "name":"Christian Dior Pure Poison",
@@ -92,7 +92,7 @@
         "quantity": 5,
         "description": "The fragrances of the Poison line take new directions with daring provocation. They are fragrances created to surprise and astonish, to let women assert their femininity with confidence.",
         "supplier": "Abdul Basit Agor Ator Industry",
-        "sold": 7
+        "sold": "yes"
     },
     {
         "name":"Chloe Nomade Eau De Perfume",
@@ -101,7 +101,7 @@
         "quantity": 5,
         "description": "The round O-shaped curves of the bottle bring softness, contrasting with the strong, graphic metallic pieces. A sleek collar and a delicate, dangling pink ribbon bring confident yet feminine detail to the elegant design.",
         "supplier": "T.R Chemical Works",
-        "sold": 4
+        "sold": "no"
     },
     {
         "name":"Prada Luna Rossa Perfume",
@@ -110,7 +110,7 @@
         "quantity": 5,
         "description": "A citrus aromatic fragrance for men Light, crisp, clean, well-balanced & uplifting Top notes of lavender absolute & bitter orange Heart notes of clary sage & spearmint Base notes of ambrette absolute & ambroxan molecule Launched in 2012 Recommended for day time or casual wear",
         "supplier": "ASM Chemical Industries Ltd",
-        "sold": 5
+        "sold": "yes"
     },
     {
         "name":"lanvin eclat darpege perfume",
@@ -119,7 +119,7 @@
         "quantity": 7,
         "description": "Eclat dArpège is classified as fruity-floral. Lanvinrevives the musical theme of his legendary Arpege perfume. The composition is delicate, fragile and angelic. Eclat d’Arpège’s first accords are green lilac and Sicilian lemon leaves which transports us to the first day of spring",
         "supplier": "Oud Al Jannah",
-        "sold": 4
+        "sold": "no"
     },
     {
         "name":"Bvlgari Omnia For Women",
@@ -128,7 +128,7 @@
         "quantity": 2,
         "description": "A citrus aromatic fragrance for men Light, crisp, clean, well-balanced & uplifting Top notes of lavender absolute & bitter orange Heart notes of clary sage & spearmint Base notes of ambrette absolute & ambroxan molecule Launched in 2012 Recommended for day time or casual wear",
         "supplier": "ASM Chemical Industries Ltd",
-        "sold": 7
+        "sold": "yes"
     },
     {
         "name":"Chloe Love Story perfume",
@@ -137,7 +137,7 @@
         "quantity": 4,
         "description": "A fresh floral fragrance neroli, Heart: orange blossom, stephanotis jasmine, Base: cedar wood",
         "supplier": "Abdul Basit Agor Ator Industry",
-        "sold": 9
+        "sold": "no"
     },
     {
         "name":"Mont Blanc Femme",
@@ -146,7 +146,7 @@
         "quantity": 5,
         "description": "Individuelle Perfume by Mont Blanc, This extremely sexy fragrance was created by mont blanc, in 2004. Its magnificent scent includes a mixture of pink bay, redcurrant, lotus, rose, vanilla, musk, and amber",
         "supplier": "ASM Chemical Industries Ltd",
-        "sold": 11
+        "sold": "yes"
     },
     {
         "name":"Jo Malone Davana",
@@ -155,7 +155,7 @@
         "quantity": 5,
         "description": "The wildness of honeysuckle, winding through the English countryside. Climbing. Twisting. Ever more alluring after dark. Fresh with rose and the aromatic, fruity twist of davana. Woody with moss. Warmed by sunshine.",
         "supplier": "Abdul Basit Agor Ator Industry",
-        "sold": 7
+        "sold": "no"
     },
     {
         "name":"Si Rose Signature",
@@ -164,7 +164,7 @@
         "quantity": 6,
         "description": "Strong. Sensitive. Serene. Discover a floral fragrance that radiates beauty and passion. Delicate and powerful, Sì Eau de Parfum embodies the very essence of todays woman. A woman who says yes to life and happiness.",
         "supplier": "ASM Chemical Industries Ltd",
-        "sold": 7
+        "sold": "yes"
     },
     {
         "name":"Jadore Dior",
@@ -173,7 +173,7 @@
         "quantity": 8,
         "description": "Jadore Eau de Parfum is an invented bouquet, finely crafted down to the last detail, like a custom-made flower. Essence of Ylang-Ylang from the Comoros unfurls its floral-fruity notes and instills a soft exotic touch. Damascus Rose, sophisticated and exuberant, then comes to warm the senses.",
         "supplier": "Abdul Basit Agor Ator Industry",
-        "sold": 2
+        "sold": "no"
     },
     {
         "name":"Ferrari Scuderia Spray",
@@ -182,6 +182,6 @@
         "quantity": 6,
         "description": "Ideal for daytime wear, this fragrance captures the effortlessly elegant but stylishly sporty feel of ferrari’s speedsters in a bottle. Wear a splash of this cologne to accelerate your confidence and drive your powerful personality home",
         "supplier": "ASM Chemical Industries Ltd",
-        "sold": 7
+        "sold": "yes"
     }
 ]

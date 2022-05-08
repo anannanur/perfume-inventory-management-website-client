@@ -1,9 +1,11 @@
+// creating custom hook 
 import { useEffect, useState } from "react";
 
 const useItems = () => {
+
     const [items, setItems] = useState([]);
     useEffect(() => {
-        fetch('https://frozen-ocean-17527.herokuapp.com/perfume')
+        fetch('http://localhost:5000/perfume')
             .then(res => res.json())
             .then(data => setItems(data))
     }, []);

@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import useItems from '../../Hooks/useItems';
 import { useNavigate } from 'react-router-dom';
-import { Button, Modal } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -13,10 +13,6 @@ const ManageItems = () => {
     const [items, setItems] = useItems();
 
 
-    // state for modal
-    const [show, setShow] = useState(false);
-    const handleClose = () => setShow(false);
-
     // navigate tp single item
     const navigate = useNavigate();
     const navigateToSingleItem = id => {
@@ -24,26 +20,21 @@ const ManageItems = () => {
     }
 
     // if user wants to delete items 
-    const handleDelete = () => {
-        // const confirmation = window.confirm('Are you sure?');
-        setShow(true);
-        // if (confirmation) {
-
-        // }
-    }
-    const confirm = id => {
-        const url = `https://frozen-ocean-17527.herokuapp.com/perfume/${id}`;
-        fetch(url, {
-            method: 'DELETE'
-        })
+    const handleDelete = id => {
+        const confirmation = window.confirm('Are you sure?');
+        if (confirmation) {
+            const url = `http://localhost:5000/perfume/${id}`;
+            fetch(url, {
+                method: 'DELETE'
+            })
             .then(res => res.json())
             .then(data => {
                 console.log(data);
                 const remainedItems = items.filter(item => item._id !== id);
                 setItems(remainedItems);
-                setShow(false);
                 toast('deleted');
             })
+        }
     }
 
     return (
@@ -67,19 +58,6 @@ const ManageItems = () => {
                                     <button onClick={() => navigateToSingleItem(item._id)} className='btn btn-dark text-white'>Update</button>
                                 </div>
                             </div>
-                            <Modal show={show} onHide={handleClose}>
-                                <Modal.Header closeButton>
-                                    <Modal.Title>Are you sure?</Modal.Title>
-                                </Modal.Header>
-                                <Modal.Footer>
-                                    <Button variant="danger" onClick={() => confirm(item._id)}>
-                                        Yes
-                                    </Button>
-                                    <Button variant="success" onClick={handleClose}>
-                                        No
-                                    </Button>
-                                </Modal.Footer>
-                            </Modal>
                             <ToastContainer />
                         </div>
                         )

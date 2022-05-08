@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
-import { toast, ToastContainer } from 'react-toastify';
+// import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { toast } from 'react-toastify';
 
 
 const MyItem = () => {
@@ -11,8 +12,8 @@ const MyItem = () => {
     const [myItems, setmyItems] = useState([]);
     useEffect(() => {
         const email = user.email;
-        console.log(email);
-        const url = `https://frozen-ocean-17527.herokuapp.com/myitem?email=${email}`;
+        //     console.log(email);
+        const url = `http://localhost:5000/myitem?email=${email}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setmyItems(data))
@@ -21,19 +22,9 @@ const MyItem = () => {
     const handleDelete = id => {
         const confirm = window.confirm('Are you sure?');
         if (confirm) {
-            const url = `https://frozen-ocean-17527.herokuapp.com/myitem/${id}`;
+
+            const url = `http://localhost:5000/perfume/${id}`;
             fetch(url, {
-                method: 'DELETE'
-            })
-                .then(res => res.json())
-                .then(data => {
-                    console.log(data);
-                    const remainedItems = myItems.filter(item => item._id !== id);
-                    setmyItems(remainedItems);
-                    toast('deleted');
-                })
-            const url2 = `https://frozen-ocean-17527.herokuapp.com/perfume/${id}`;
-            fetch(url2, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
@@ -67,13 +58,12 @@ const MyItem = () => {
                                     <button className='btn btn-dark text-white'>Update</button>
                                 </div>
                             </div>
-                            <ToastContainer />
                         </div>)
                     }
                 </div>
             </div>
         </div>
     );
-};
+}
 
 export default MyItem;

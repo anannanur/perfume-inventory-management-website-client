@@ -4,6 +4,7 @@ import './Item.css';
 
 const Item = ({ item }) => {
     const { _id, name, img, description, price, quantity, supplier } = item;
+    // navigate to single item page 
     const navigate = useNavigate();
     const navigateToSingleItem = id => {
         navigate(`/inventory/${id}`);

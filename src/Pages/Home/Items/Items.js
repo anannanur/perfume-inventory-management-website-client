@@ -1,17 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
+import useItems from '../../../Hooks/useItems';
 import Item from '../Item/Item';
 import './Items.css';
 
 const Items = () => {
 
-    const [items, setItems] = useState([]);
-    useEffect(() => {
-        fetch('https://frozen-ocean-17527.herokuapp.com/perfume')
-            .then(res => res.json())
-            .then(data => setItems(data))
-    }, []);
-
+    // using custom hook 
+    const [items] = useItems([]);
     return (
         <div className='py-5'>
             <h1 className='item-title pt-3 pb-5 fw-bold text-dark'>Inventory Items</h1>
