@@ -5,7 +5,7 @@ const Loading = () => {
     return (
         <div>
             <div style={{height: '80vh'}} className='bg-dark d-flex justify-content-center align-items-center'>
-                <Button variant="info" disabled>
+                <Button variant="warning" disabled>
                     <Spinner
                         as="span"
                         animation="grow"

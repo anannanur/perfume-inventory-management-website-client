@@ -50,17 +50,15 @@
     transform: scale(1);
 }
 
-.team-container .card .content .contentBx h4 {
+.team-container .card .content .contentBx h5 {
     color: goldenrod;
-    font-size: 1.7rem;
     font-weight: bold;
     text-align: center;
     letter-spacing: 1px;
 }
 
-.team-container .card .content .contentBx h5 {
+.team-container .card .content .contentBx h6 {
     color: #6c758f;
-    font-size: 1.2rem;
     font-weight: bold;
     text-align: center;
 }

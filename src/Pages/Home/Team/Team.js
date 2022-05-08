@@ -8,7 +8,7 @@ import './Team.css';
 const Team = () => {
     return (
         <div className='py-5' style={{ backgroundColor: '#f2f3f7' }}>
-             <h1 className='text-center fw-bold team-title py-3'>Some of our Members</h1>
+             <h1 className='text-center fw-bold team-title pt-3 pb-5'>Some of our Members</h1>
             <div className="team-container">
                 <div className="card">
                     <div className="content">
@@ -16,8 +16,8 @@ const Team = () => {
                             <img src={img1} alt="" />
                         </div>
                         <div className="contentBx">
-                            <h4 className='fw-bold'>William Starc</h4>
-                            <h5 className='fw-bold'>Director</h5>
+                            <h5 className='fw-bold'>William Starc</h5>
+                            <h6 className='fw-bold'>Director</h6>
                         </div>
                         <div className="sci">
                             <Link to=""><i className="fa fa-facebook" aria-hidden="true"></i></Link>
@@ -32,8 +32,8 @@ const Team = () => {
                             <img src={img2} alt="" />
                         </div>
                         <div className="contentBx">
-                            <h4 className='fw-bold'>Anny Brown</h4>
-                            <h5 className='fw-bold'>Owner</h5>
+                            <h5 className='fw-bold'>Anny Brown</h5>
+                            <h6 className='fw-bold'>Owner</h6>
                         </div>
                         <div className="sci">
                             <Link to=""><i className="fa fa-facebook" aria-hidden="true"></i></Link>
@@ -48,8 +48,8 @@ const Team = () => {
                             <img src={img3} alt="" />
                         </div>
                         <div className="contentBx">
-                            <h4 className='fw-bold'>Alen Peter</h4>
-                            <h5 className='fw-bold'>Partner</h5>
+                            <h5 className='fw-bold'>Alen Peter</h5>
+                            <h6 className='fw-bold'>Partner</h6>
                         </div>
                         <div className="sci">
                             <Link to=""><i className="fa fa-facebook" aria-hidden="true"></i></Link>
