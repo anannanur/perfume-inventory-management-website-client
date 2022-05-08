@@ -4,7 +4,7 @@ import { Button, Spinner } from 'react-bootstrap';
 const Loading = () => {
     return (
         <div>
-            <div style={{height: '80vh'}} className='bg-dark d-flex justify-content-center align-items-center'>
+            <div style={{height: '100vh'}} className='bg-dark d-flex justify-content-center align-items-center'>
                 <Button variant="warning" disabled>
                     <Spinner
                         as="span"

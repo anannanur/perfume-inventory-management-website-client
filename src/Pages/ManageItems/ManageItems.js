@@ -6,11 +6,12 @@ import { Button, Modal } from 'react-bootstrap';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+
 const ManageItems = () => {
 
     // custom hook 
     const [items, setItems] = useItems();
-   
+
 
     // state for modal
     const [show, setShow] = useState(false);
@@ -27,7 +28,7 @@ const ManageItems = () => {
         // const confirmation = window.confirm('Are you sure?');
         setShow(true);
         // if (confirmation) {
-            
+
         // }
     }
     const confirm = id => {
@@ -37,7 +38,7 @@ const ManageItems = () => {
         })
             .then(res => res.json())
             .then(data => {
-               console.log(data);
+                console.log(data);
                 const remainedItems = items.filter(item => item._id !== id);
                 setItems(remainedItems);
                 setShow(false);
@@ -71,16 +72,16 @@ const ManageItems = () => {
                                     <Modal.Title>Are you sure?</Modal.Title>
                                 </Modal.Header>
                                 <Modal.Footer>
-                                <Button variant="danger" onClick={() => confirm(item._id)}>
+                                    <Button variant="danger" onClick={() => confirm(item._id)}>
                                         Yes
                                     </Button>
                                     <Button variant="success" onClick={handleClose}>
                                         No
-                                    </Button>                                   
+                                    </Button>
                                 </Modal.Footer>
                             </Modal>
-                            <ToastContainer/>
-                        </div>                      
+                            <ToastContainer />
+                        </div>
                         )
                     }
                 </div>
