@@ -15,8 +15,7 @@ const AddItem = () => {
 
     const onSubmit = data => {
         console.log(data);
-        // const url = `https://frozen-ocean-17527.herokuapp.com/perfume`;
-        const url = `http://localhost:5000/perfume`;
+        const url = `https://frozen-ocean-17527.herokuapp.com/perfume`;
         fetch(url, {
             method: 'POST',
             headers: {

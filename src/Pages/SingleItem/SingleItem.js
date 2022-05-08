@@ -6,7 +6,7 @@ const SingleItem = () => {
     const [item, setItem] = useState({});
 
     useEffect(() => {
-        const url = `http://localhost:5000/perfume/${id}`;
+        const url = `https://frozen-ocean-17527.herokuapp.com/perfume/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setItem(data))
@@ -22,7 +22,7 @@ const SingleItem = () => {
         const newItem = { ...item, quantity: newQuantity };
         setItem(newItem);
         fetch(
-            `http://localhost:5000/perfume/${id}`,
+            `https://frozen-ocean-17527.herokuapp.com/perfume/${id}`,
             {
                 method: "PUT",
                 headers: {
@@ -53,7 +53,7 @@ const SingleItem = () => {
             setItem(newItem);
 
             fetch(
-                `http://localhost:5000/perfume/${id}`,
+                `https://frozen-ocean-17527.herokuapp.com/perfume/${id}`,
                 {
                     method: "PUT",
                     headers: {
