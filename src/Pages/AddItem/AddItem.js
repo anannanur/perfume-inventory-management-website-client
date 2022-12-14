@@ -15,7 +15,7 @@ const AddItem = () => {
 
     const onSubmit = data => {
         console.log(data);
-        const url = `https://frozen-ocean-17527.herokuapp.com/perfume`;
+        const url = `https://perfume-inventory-management-website-server.vercel.app/perfume`;
         fetch(url, {
             method: 'POST',
             headers: {

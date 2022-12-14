@@ -13,7 +13,7 @@ const MyItem = () => {
     const [myItems, setmyItems] = useState([]);
     useEffect(() => {
         const email = user.email;
-        const url = `https://frozen-ocean-17527.herokuapp.com/myitem?email=${email}`;
+        const url = `https://perfume-inventory-management-website-server.vercel.app/myitem?email=${email}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setmyItems(data))
@@ -24,7 +24,7 @@ const MyItem = () => {
         const confirm = window.confirm('Are you sure?');
         if (confirm) {
 
-            const url = `https://frozen-ocean-17527.herokuapp.com/perfume/${id}`;
+            const url = `https://perfume-inventory-management-website-server.vercel.app/perfume/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

@@ -6,7 +6,7 @@ const SingleItem = () => {
     const [item, setItem] = useState({});
 
     useEffect(() => {
-        const url = `https://frozen-ocean-17527.herokuapp.com/perfume/${id}`;
+        const url = `https://perfume-inventory-management-website-server.vercel.app/perfume/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setItem(data))
@@ -22,7 +22,7 @@ const SingleItem = () => {
         const newItem = { ...item, quantity: newQuantity };
         setItem(newItem);
         fetch(
-            `https://frozen-ocean-17527.herokuapp.com/perfume/${id}`,
+            `https://perfume-inventory-management-website-server.vercel.app/perfume/${id}`,
             {
                 method: "PUT",
                 headers: {
@@ -53,7 +53,7 @@ const SingleItem = () => {
             setItem(newItem);
 
             fetch(
-                `https://frozen-ocean-17527.herokuapp.com/perfume/${id}`,
+                `https://perfume-inventory-management-website-server.vercel.app/perfume/${id}`,
                 {
                     method: "PUT",
                     headers: {
